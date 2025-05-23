@@ -81,7 +81,7 @@ session_start();
     <?php if(basename($_SERVER['PHP_SELF']) === 'index.php'): ?>
     <div class="carousel-container">
         <div class="carousel-slide active">
-            <img src="uploads/sale.jpg" alt="Special Offers">
+            <img src="uploads/new.jpg" alt="Special Offers">
             <div class="carousel-content">
                 <h2>Summer Sale</h2>
                 <p>Up to 50% off on selected items</p>
@@ -89,7 +89,7 @@ session_start();
             </div>
         </div>
         <div class="carousel-slide">
-            <img src="uploads/arrival.jpg" alt="New Collection">
+            <img src="uploads/summer.jpg" alt="New Collection">
             <div class="carousel-content">
                 <h2>New Arrivals</h2>
                 <p>Check out our latest collection</p>
