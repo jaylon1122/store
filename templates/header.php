@@ -6,6 +6,7 @@ use Aries\MiniFrameworkStore\Models\Category;
 
 $categories = new Category();
 
+
 session_start();
 
 ?>
@@ -18,6 +19,7 @@ session_start();
     <title>Online Store</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
 </head>
 <body class="store-body">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -75,3 +77,41 @@ session_start();
         </div>
     </div>
     </nav>
+
+    <?php if(basename($_SERVER['PHP_SELF']) === 'index.php'): ?>
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <img src="uploads/sale.jpg" alt="Special Offers">
+            <div class="carousel-content">
+                <h2>Summer Sale</h2>
+                <p>Up to 50% off on selected items</p>
+                <a href="#products" class="carousel-btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="uploads/arrival.jpg" alt="New Collection">
+            <div class="carousel-content">
+                <h2>New Arrivals</h2>
+                <p>Check out our latest collection</p>
+                <a href="#new-arrivals" class="carousel-btn">Discover More</a>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="uploads/free.jpg" alt="Free Shipping">
+            <div class="carousel-content">
+                <h2>Free Shipping</h2>
+                <p>On orders over $50</p>
+                <a href="#featured" class="carousel-btn">Start Shopping</a>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <div class="carousel-dot active"></div>
+            <div class="carousel-dot"></div>
+            <div class="carousel-dot"></div>
+        </div>
+    </div>
+    <?php endif; ?>
+
+    <script src="assets/js/carousel.js"></script>
+</body>
+</html>

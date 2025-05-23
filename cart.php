@@ -1,4 +1,9 @@
-<?php include 'helpers/functions.php'; ?>
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+include 'helpers/functions.php';
+?>
 <?php template('header.php'); ?>
 <?php
 

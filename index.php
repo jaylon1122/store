@@ -10,6 +10,38 @@ $amounLocale = 'en_PH';
 $pesoFormatter = new NumberFormatter($amounLocale, NumberFormatter::CURRENCY);
 
 ?>
+<!-- Place this in your home page view file -->
+<link rel="stylesheet" href="/assets/css/carousel.css">
+<div class="carousel-container">
+    <div class="carousel-slide active">
+        <img src="uploads/home.jpg" alt="Banner 1">
+        <div class="carousel-content">
+            <h2>Welcome to Our Store</h2>
+            <p>Discover the best products here!</p>
+        </div>
+    </div>
+    <div class="carousel-slide">
+        <img src="uploads/apple.jpg" alt="Banner 2">
+        <div class="carousel-content">
+            <h2>Latest Electronics</h2>
+            <p>Find the newest gadgets and devices.</p>
+        </div>
+    </div>
+    <div class="carousel-slide">
+        <img src="uploads/homedecor.jpg" alt="Banner 3">
+        <div class="carousel-content">
+            <h2>Home & Appliances</h2>
+            <p>Upgrade your home with our selection.</p>
+        </div>
+    </div>
+    <div class="carousel-nav">
+        <span class="carousel-dot active"></span>
+        <span class="carousel-dot"></span>
+        <span class="carousel-dot"></span>
+    </div>
+</div>
+<script src="/assets/js/carousel.js"></script>
+
 <div class="container">
     
 </div>

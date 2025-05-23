@@ -13,7 +13,7 @@
             formData.append('productId', productId);
             formData.append('quantity', quantity);
 
-            fetch('/cart-process.php', {
+            fetch('cart-process.php', { 
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -24,9 +24,8 @@
             .then(data => {
                 if (data.status === 'success') {
                     alert('Product added to cart successfully!');
-                    // Optionally update cart UI here
                 } else {
-                    alert('Failed to add product to cart.');
+                    alert(data.message || 'Failed to add product to cart.');
                 }
             })
             .catch(error => {

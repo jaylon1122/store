@@ -23,7 +23,8 @@ class User extends Database {
     }
 
     public function register($data) {
-        $sql = "INSERT INTO users (name, email, password, address, phone, birthdate, created_at, updated_at) VALUES (:name, :email, :password, :created_at, :updated_at)";
+        $sql = "INSERT INTO users (name, email, password, address, phone, birthdate, created_at, updated_at) 
+                VALUES (:name, :email, :password, :created_at, :updated_at)";
         $stmt = $this->db->prepare($sql);
         $stmt->execute([
             'name' => $data['name'],
